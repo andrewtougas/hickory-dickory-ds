@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="/">[AMSH] Anti Electrites</a>
+        <a class="navbar-brand" href="/">[POBA] Potential Barneys</a>
       </div>
     </nav>
 
