@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="/">[POBA] Potential Barneys</a>
+        <a class="navbar-brand" href="/">{{ `${teamAbbr} ${teamName}` }}</a>
       </div>
     </nav>
 
@@ -236,7 +236,9 @@ export default {
   data () {
     return {
       stats: stats,
-      dateFilter: 'Overall'
+      dateFilter: 'Overall',
+      teamAbbr: process.env.VUE_APP_TEAM_ABBR,
+      teamName: process.env.VUE_APP_TEAM_NAME
     }
   },
   computed: {
