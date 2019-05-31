@@ -148,16 +148,18 @@
                     <td class="text-right">{{ game.players.kyle.saves }}</td>
                     <td class="text-right">{{ game.players.kyle.score }}</td>
                   </tr>
-                  <tr class="table-dark">
-                    <td></td>
-                    <td class="text-right">{{ getPlayerGoals('kyle') }}</td>
-                    <td class="text-right">{{ getPlayerShots('kyle') }}</td>
-                    <td class="text-right">{{ getShootingPerc(getPlayerGoals('kyle'), getPlayerShots('kyle')) }}%</td>
-                    <td class="text-right">{{ getPlayerAssists('kyle') }}</td>
-                    <td class="text-right">{{ getPlayerSaves('kyle') }}</td>
-                    <td class="text-right">{{ getPlayerXP('kyle') }}</td>
-                  </tr>
                 </tbody>
+                <tfoot class="thead-dark">
+                  <tr>
+                    <th></th>
+                    <th class="text-right">{{ getPlayerGoals('kyle') }}</th>
+                    <th class="text-right">{{ getPlayerShots('kyle') }}</th>
+                    <th class="text-right">{{ getShootingPerc(getPlayerGoals('kyle'), getPlayerShots('kyle')) }}%</th>
+                    <th class="text-right">{{ getPlayerAssists('kyle') }}</th>
+                    <th class="text-right">{{ getPlayerSaves('kyle') }}</th>
+                    <th class="text-right">{{ getPlayerXP('kyle') }}</th>
+                  </tr>
+                </tfoot>
               </table>
             </div>
             <div class="col-xl-6 col-md-12">
@@ -204,16 +206,18 @@
                     <td class="text-right">{{ game.players.andrew.saves }}</td>
                     <td class="text-right">{{ game.players.andrew.score }}</td>
                   </tr>
-                  <tr class="table-dark">
-                    <td></td>
-                    <td class="text-right">{{ getPlayerGoals('andrew') }}</td>
-                    <td class="text-right">{{ getPlayerShots('andrew') }}</td>
-                    <td class="text-right">{{ getShootingPerc(getPlayerGoals('andrew'), getPlayerShots('andrew')) }}%</td>
-                    <td class="text-right">{{ getPlayerAssists('andrew') }}</td>
-                    <td class="text-right">{{ getPlayerSaves('andrew') }}</td>
-                    <td class="text-right">{{ getPlayerXP('andrew') }}</td>
-                  </tr>
                 </tbody>
+                <tfoot class="thead-dark">
+                  <tr>
+                    <th></th>
+                    <th class="text-right">{{ getPlayerGoals('andrew') }}</th>
+                    <th class="text-right">{{ getPlayerShots('andrew') }}</th>
+                    <th class="text-right">{{ getShootingPerc(getPlayerGoals('andrew'), getPlayerShots('andrew')) }}%</th>
+                    <th class="text-right">{{ getPlayerAssists('andrew') }}</th>
+                    <th class="text-right">{{ getPlayerSaves('andrew') }}</th>
+                    <th class="text-right">{{ getPlayerXP('andrew') }}</th>
+                  </tr>
+                </tfoot>
               </table>
             </div>
           </div>
