@@ -88,10 +88,4 @@ export default {
 body {
   padding-top: 5.5rem;
 }
-.app {
-  &__result {
-    display: inline-block;
-    width: 15px;
-  }
-}
 </style>

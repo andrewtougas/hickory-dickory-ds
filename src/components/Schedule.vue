@@ -71,9 +71,10 @@ export default {
     formatGameResult (game) {
       let resultClass = game.result === 'win' ? 'text-success' : 'text-danger'
       let otStatus = game.overtime ? '(F/OT)' : ''
-      return `<span class="app__result ${resultClass}">${game.result[0].toUpperCase()}</span> ${
-        game.goalsFor
-      }-${game.goalsAgainst} ${otStatus}`
+      let forfeitStatus = game.forfeit ? '<abbr title="Opponent Forfeit" class="initialism">*</abbr>' : ''
+      return `<span class="app__result ${resultClass}">${game.result[0].toUpperCase()}</span> 
+        ${game.goalsFor}-${game.goalsAgainst} 
+        ${otStatus} ${forfeitStatus}`
     },
     getRecord () {
       const totalWins = this.filteredGames.filter(game => game.result === 'win').length
@@ -90,3 +91,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.app {
+  &__result {
+    display: inline-block;
+    width: 15px;
+  }
+}
+</style>
