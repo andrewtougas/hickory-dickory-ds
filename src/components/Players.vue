@@ -21,6 +21,7 @@
             <p class="h1">{{ getPlayerSaves('kyle') }}</p>
           </div>
         </div>
+        <canvas id="kyle-chart" class="my-4" width="800" height="200"></canvas>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -79,6 +80,7 @@
             <p class="h1">{{ getPlayerSaves('andrew') }}</p>
           </div>
         </div>
+        <canvas id="andrew-chart" class="my-4" width="800" height="200"></canvas>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -123,11 +125,38 @@
 
 <script>
 import mixin from '@/mixins/mixin.js'
+import Chart from 'chart.js'
+
+let chart1 = null
+let chart2 = null
+const chartOptions = {
+  responsive: true,
+  aspectRatio: 4,
+  maintainAspectRatio: true,
+  legend: {
+    display: false
+  },
+  tooltips: {
+    enabled: false
+  },
+  scales: {
+    xAxes: [{
+      ticks: {
+        display: false
+      }
+    }]
+  }
+}
 
 export default {
   name: 'players',
   mixins: [mixin],
   props: ['filteredGames'],
+  watch: {
+    filteredGames () {
+      this.createCharts()
+    }
+  },
   methods: {
     getPlayerGoals (player) {
       return this.filteredGames.reduce(
@@ -158,7 +187,50 @@ export default {
         (acc, cur) => acc + cur.players[player].score,
         0
       )
+    },
+    createCharts () {
+      if (chart1 && chart2) {
+        chart1.destroy()
+        chart2.destroy()
+      }
+
+      const ctx1 = document.getElementById('andrew-chart')
+      chart1 = new Chart(ctx1, {
+        type: 'line',
+        data: {
+          labels: this.filteredGames.map(game => game.id),
+          datasets: [{
+            data: this.filteredGames.map(game => game.players.andrew.score),
+            backgroundColor: 'rgba(0, 123, 255, 0.5)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            lineTension: 0.2,
+            pointRadius: 0,
+            pointHoverRadius: 0
+          }]
+        },
+        options: chartOptions
+      })
+
+      const ctx2 = document.getElementById('kyle-chart')
+      chart2 = new Chart(ctx2, {
+        type: 'line',
+        data: {
+          labels: this.filteredGames.map(game => game.id),
+          datasets: [{
+            data: this.filteredGames.map(game => game.players.kyle.score),
+            backgroundColor: 'rgba(0, 123, 255, 0.5)',
+            borderColor: 'rgba(0, 123, 255, 1)',
+            lineTension: 0.2,
+            pointRadius: 0,
+            pointHoverRadius: 0
+          }]
+        },
+        options: chartOptions
+      })
     }
+  },
+  mounted () {
+    this.createCharts()
   }
 }
 </script>
