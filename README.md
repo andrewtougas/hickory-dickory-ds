@@ -1,6 +1,6 @@
-# [AMSH] Anti-Electrites
+# [BEER] Hold My Beer
 
-This website tracks stats and schedule results for the [AMSH Anit-Electrites](http://amsh.andrewtougas.com) Rocket League club. The site was built with Vue CLI and uses Vue.js.
+This website tracks stats and schedule results for the [BEER Hold My Beer](http://amsh.andrewtougas.com) Rocket League club. The site was built with Vue CLI and uses Vue.js.
 
 ## Project Setup
 
