@@ -1,6 +1,6 @@
-# [BEER] Hold My Beer
+# [BEER] The Hickory Dickory Ds
 
-This website tracks stats and schedule results for the [BEER Hold My Beer](http://amsh.andrewtougas.com) Rocket League club. The site was built with Vue CLI and uses Vue.js.
+This website tracks stats and schedule results for the [BEER The Hickory Dickory Ds](http://amsh.andrewtougas.com) Rocket League club. The site was built with Vue CLI and uses Vue.js.
 
 ## Project Setup
 
