@@ -6,8 +6,11 @@ set -e
 # build
 npm run build
 
+# rename dist directory as /dist is in .gitignore
+mv dist gh-pages-dist
+
 # navigate into the build output directory
-cd dist
+cd gh-pages-dist
 
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
