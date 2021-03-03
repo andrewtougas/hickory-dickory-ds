@@ -1,6 +1,6 @@
 # [BEER] The Hickory Dickory Ds
 
-This website tracks stats and schedule results for the [BEER The Hickory Dickory Ds](http://amsh.andrewtougas.com) Rocket League club. The site was built with Vue CLI and uses Vue.js.
+A web app for tracking results and player statistics for the [BEER The Hickory Dickory Ds](http://hdd.andrewtougas.com) Rocket League club. The site was built with Vue CLI and uses Vue.js.
 
 ## Project Setup
 

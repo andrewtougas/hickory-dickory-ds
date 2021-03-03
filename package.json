@@ -1,8 +1,8 @@
 {
-  "name": "amsh",
-  "version": "1.2.0",
-  "homepage": "https://gitlab.com/andrewtougas/amsh",
-  "description": "A website tracking stats and schedule results for The Hickory Dickory Ds Rocket League club",
+  "name": "hickory-dickory-ds",
+  "version": "1.2.1",
+  "homepage": "https://andrewtougas.github.io/hickory-dickory-ds",
+  "description": "A web app for tracking results and player statistics for the [BEER] Hickory Dickory Ds Rocket League club",
   "author": "Andrew Tougas <andrewhtougas@gmail.com> (http://andrewtougas.com)",
   "private": true,
   "scripts": {
